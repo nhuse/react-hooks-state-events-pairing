@@ -1,4 +1,5 @@
 import video from "../data/video.js";
+import VideoInfo from "./VideoInfo"
 
 function App() {
   console.log("Here's your data:", video);
@@ -8,11 +9,12 @@ function App() {
       <iframe
         width="919"
         height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameborder="0"
-        allowfullscreen
+        src={video.embedUrl}
+        frameBorder="0"
+        allowFullScreen
         title="Thinking in React"
       />
+      <VideoInfo video={video}/>
     </div>
   );
 }
